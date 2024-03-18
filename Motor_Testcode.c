@@ -8,9 +8,9 @@
 //pin layout
 #define ENAB BIT6    //PWM PIN FOR ENA&B
 #define IN1 BIT5     //M1 PIN1 (2.5)
-#define IN2 BIT4     //M1 PIN2
-#define IN3 BIT3     //M2 PIN1
-#define IN4 BIT2     //M2 PIN2
+#define IN2 BIT4     //M1 PIN2 (2.4)
+#define IN3 BIT3     //M2 PIN1 (2.3)
+#define IN4 BIT2     //M2 PIN2 (2.2)
 
 //FUNCTIONS
 void setup(){

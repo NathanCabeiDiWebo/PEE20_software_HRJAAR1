@@ -47,14 +47,21 @@ int main(void)
     setup();
     _delay_cycles(500000);
         while(1){
-            forward();
-            pause;
-            left();
-            pause;
-            right();
-            pause;
-            back();
-            pause;
-        }
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+    setup();
+
+        while(1){
+           P2OUT |= IN3;
+           P2OUT &= ~(IN4);
+           P2OUT |= IN1;
+           P2OUT &= ~(IN2);
+           pause;
+           P2OUT |= IN4;
+           P2OUT &= ~(IN3);
+           P2OUT &= ~(IN1);
+           P2OUT |= IN2;
+           pause;
+       }
     return 0;
+  }
 }
